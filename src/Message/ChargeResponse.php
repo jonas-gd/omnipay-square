@@ -78,7 +78,7 @@ class ChargeResponse extends AbstractResponse implements RedirectResponseInterfa
      */
     public function getTransactionReference()
     {
-        return $this->getOrderId();
+        return $this->getTransactionId();
     }
 
     /**
