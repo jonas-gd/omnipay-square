@@ -19,6 +19,11 @@ class RefundResponse extends AbstractResponse
     {
         return $this->data['status'] === 'PENDING';
     }
+    
+    public function getTransactionReference()
+    {
+        return $this->data['id'];
+    }
 
     public function getMessage()
     {
