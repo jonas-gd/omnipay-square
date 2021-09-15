@@ -22,7 +22,7 @@ class RefundResponse extends AbstractResponse
     
     public function getTransactionReference()
     {
-        return $this->data['id'];
+        return $this->isSuccessful() || $this->isPending() ? $this->data['id'] : null;
     }
 
     public function getMessage()
